@@ -1,5 +1,6 @@
 package br.com.tecnologiasistech.LivrosApp.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,4 +23,7 @@ public class CategoriaService {
 				"Objeto não encontrado! ID: " + id + ", Tipo: " + Categoria.class.getName()));
 	}
 
+	public List<Categoria> findAll() {
+		return categoriaRepository.findAll();
+	}
 }
